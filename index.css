@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+.img-box{
+  width: 100%;
+  height: calc(100vh - 110px);
+  overflow: hidden;
+  position: relative;
+}
+.img-box>div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 110px);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  20%{
+    opacity: 7;
+  }
+  80%{
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100%{
+    z-index: 0;
+    opacity: 0;
+  }
+}
+/* 1枚目のスライド */
+.img-box>div:first-of-type{
+  background-image: url("../images/oisichaya/hulu/oisi-1.jpg");
+}
+
+/* 2枚目のスライド */
+.img-box>div:nth-of-type(2){
+  background-image: url("../images/oisichaya/hulu/oisi-2.jpg");
+  animation-delay: 4s;
+}
+
+/* 3枚目のスライド */
+.img-box>div:last-of-type{
+  background-image: url("../images/oisichaya/hulu/oisi-3.jpg");
+  animation-delay: 8s;
+}
+
+.first-view-text {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-bottom: 80px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.first-view-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 56px;
+  line-height: 72px;
+}
+
+.first-view-text p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.lead {
+  max-width: 1200px;
+  margin: 60px auto;
+}
+
+.lead p {
+  line-height: 2;
+  text-align: center;
+}
+
+.link-button-area {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.link-button {
+  background-color:  #16723E;
+  display: inline-block;
+  min-width: 180px;
+  line-height: 48px;
+  border-radius: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.link-button:hover {
+  background-color: #16723E;
+}
+
+.recommended {
+  background-color: #f8f8f8;
+  padding-top: 45px;
+  padding-bottom: 55px;
+}
+
+.recommended h2 {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.recommended h2::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: #000000;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item-list {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  overflow: scroll;
+}
+
+.item-list li {
+  flex-shrink: 0;
+  width: 260px;
+  margin-left: 75px;
+}
+
+.item-list li:first-child {
+  margin-left: 0;
+}
+
+.item-list dl {
+  margin-top: 20px;
+}
+
+.item-list dt {
+  font-weight: bold;
+}
+
+.item-list dd {
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.item-list .price {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+@media (max-width: 800px) {
+
+ .img-box{
+    width: 100%;
+    height: calc(100vh - 110px);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .first-view-text {
+    padding-top: 60px;
+    padding-left: 20px;
+  }
+
+  .first-view-text h1 {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .first-view-text p {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .lead {
+    padding-left: 50px;
+    padding-right: 20px;
+    text-align: center;
+  }
+
+  .lead p {
+    text-align: left;
+  }
+
+  .item-list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .item-list li {
+    width: 220px;
+    margin-left: 30px;
+  }
+}
