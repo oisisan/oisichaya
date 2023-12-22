@@ -39,7 +39,7 @@
 }
 /* 1枚目のスライド */
 .img-box>div:first-of-type{
-  background-image: url("https://oisisan.github.io/oisichaya/images/oisichaya/hulu/oisi-1.jpg");
+  background-image: url("./images/oisichaya/hulu/oisi-1.jpg");
 }
 
 /* 2枚目のスライド */
